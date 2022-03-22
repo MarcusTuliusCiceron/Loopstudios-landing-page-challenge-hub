@@ -1,0 +1,168 @@
+.top_section {
+  padding-left: 165px;
+  padding-right: 165px;
+  padding-top: 64px;
+  height: 650px;
+  color: white;
+  background-image: url(/images/desktop/image-herocopy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top_section header {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 130px;
+  opacity: 0;
+  -webkit-animation: navFadeIn 600ms;
+          animation: navFadeIn 600ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.top_section header nav a {
+  color: white;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 32px;
+  position: relative;
+}
+
+.top_section header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  border-radius: 2px;
+  background-color: white;
+  -webkit-transition: width 250ms linear;
+  transition: width 250ms linear;
+}
+
+.top_section header nav a:hover::after {
+  width: 100%;
+}
+
+.top_section .moto {
+  width: 650px;
+  height: 278px;
+  padding: 40px;
+  border: solid 3px white;
+  opacity: 0;
+  -webkit-animation: titleFadeIn 600ms;
+          animation: titleFadeIn 600ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.top_section .moto h1 {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 70px;
+}
+
+@-webkit-keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alata', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.hideForDesktop {
+  display: none;
+}
+
+@media (max-width: 64rem) {
+  .hideForDesktop {
+    display: block;
+  }
+}
+
+.hideForMobile {
+  display: block;
+}
+
+@media (max-width: 64rem) {
+  .hideForMobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,81 @@
+
+
+.top_section{
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-top: 64px;
+    height: 650px;
+    color: $White;
+    background-image: url(/images/desktop/image-herocopy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header{
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 130px;
+        opacity: 0;
+        animation: navFadeIn 600ms;
+        animation-fill-mode: forwards;
+        animation-delay: 1200ms;
+
+        nav{
+            a{
+                color: $White;
+                font-family: 'Alata', sans-serif;
+                font-size: 15px;
+                text-decoration: none;
+                margin-left: 32px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 3px;
+                    bottom: -3px;
+                    left: 0;
+                    border-radius: 2px;
+                    background-color: $White;
+                    transition: width 250ms linear;
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .hamburgerBtn{
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            transition: all 200ms ease-in-out;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .moto{
+        width: 650px;
+        height: 278px;
+        padding: 40px;
+        border: solid 3px $White;
+        opacity: 0;
+        animation: titleFadeIn 600ms;
+        animation-delay: 600ms;
+        animation-fill-mode: forwards;
+        h1{
+            text-transform: uppercase;
+            font-size: 72px;
+            font-weight: 400;
+            line-height: 70px;
+        }
+    }
+}
