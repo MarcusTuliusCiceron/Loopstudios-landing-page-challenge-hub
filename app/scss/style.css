@@ -111,10 +111,18 @@
             animation-delay: 600ms;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@media (max-width: 43.125em) {
+  .top_section .moto {
+    height: 196px;
+    width: 327px;
+    padding: 26px;
   }
 }
 
@@ -123,6 +131,13 @@
   font-size: 72px;
   font-weight: 400;
   line-height: 70px;
+}
+
+@media (max-width: 43.125em) {
+  .top_section .moto h1 {
+    font-size: 40px;
+    line-height: 38px;
+  }
 }
 
 .top_section .overlay {
