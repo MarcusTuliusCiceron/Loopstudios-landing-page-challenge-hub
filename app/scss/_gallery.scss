@@ -1,0 +1,100 @@
+.gallery{
+    width: 80%;
+    max-width: 1111px;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 184px;
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+        h2{
+            font-size: 48px;
+            line-height: 48px;
+            text-transform: uppercase;
+        }
+    }
+    &_grid{
+        display: grid;
+        grid-template-columns: repeat(4, calc(25% - 15px));
+        grid-template-rows: repeat(2, 1fr);
+        height: 900px;
+        gap: 20px;
+
+        @include breakpoint-down(medium){
+            grid-template-columns: repeat(2, calc(50% - 10px));
+            grid-template-rows: repeat(4, 1fr);
+        }
+        @include breakpoint-down(small){
+            
+        }
+        .grid_item{
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &:nth-child(1){
+                background-image: url(../../images/desktop/image-deep-earth.jpg);
+            }
+            &:nth-child(2){
+                background-image: url(../../images/desktop/image-night-arcade.jpg);
+            }
+            &:nth-child(3){
+                background-image: url(../../images/desktop/image-soccer-team.jpg);
+            }
+            &:nth-child(4){
+                background-image: url(../../images//desktop/image-grid.jpg);
+            }
+            &:nth-child(5){
+                background-image: url(../../images/desktop/image-from-above.jpg);
+            }
+            &:nth-child(6){
+                background-image: url(../../images/desktop/image-pocket-borealis.jpg);
+            }
+            &:nth-child(7){
+                background-image: url(../../images/desktop/image-curiosity.jpg);
+            }
+            &:nth-child(8){
+                background-image: url(../../images/desktop/image-fisheye.jpg);
+            }
+            .grid_overlay{
+                height: 100%;
+                display: flex;
+                align-items: end;
+                text-transform: uppercase;
+                color: $White;
+                font-size: 32px;
+                line-height: 32px;
+                padding: 32px 40px;
+                transition: all 300ms ease-in-out;
+                &:hover{
+                    background: rgba(255, 255, 255, 0.75071);
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        
+    }
+
+    button{
+     height: 40px;
+     width: 157px;
+     text-transform: uppercase;
+     background-color: $White;
+     border: solid 2px black;
+     font-size: 14px;
+     font-family: 'Alata', sans-serif;   
+     outline: none;
+     transition: all 300ms ease-in-out;
+     &:hover{
+        background-color: black;
+        color: $White;
+        cursor: pointer;
+     }    
+    }
+    .hideForDesktop{
+        margin: 34px auto;
+    }
+}

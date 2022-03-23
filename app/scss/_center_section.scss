@@ -1,0 +1,76 @@
+.center_section{
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 184px;
+    height: 500px;
+    width: 80%;
+    max-width: 1111px;
+    background-image: url(../../images/desktop.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    position: relative;
+    opacity: 0;
+    @include breakpoint-down(medium){
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        background-position: top;
+        padding-top: 55vw;
+        margin-top: 96px;
+        margin-bottom: 96px;
+    }
+
+    .inner_box{
+        background-color: $White;
+        height: 317px;
+        width: 541px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding-top: 96px;
+        padding-left: 96px;
+        opacity: 0;
+        @include breakpoint-down(medium){
+            height: auto;
+            width: 90%;
+            padding-left: 0px;
+            padding-right: 0px;
+            position: relative;
+            background-color: transparent;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h2{
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-weight: 300;
+            @include breakpoint-down(small){
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 25px;
+            font-family: 'Alata', sans-serif;
+            font-weight: 400;
+            opacity: 0.5;
+        }
+    }
+
+}
+
+.center_section_in_view{
+    animation: centerFadeIn 500ms ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+.inner_box_in_view{
+    animation: innerBoxSlideIn 500ms ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+}

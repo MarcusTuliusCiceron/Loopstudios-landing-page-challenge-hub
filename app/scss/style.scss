@@ -2,6 +2,8 @@
 @import "mixin";
 @import "top_section";
 @import "animation";
+@import "center_section";
+@import "gallery";
 
 
 // style reset and import font family for the whole page
@@ -19,6 +21,7 @@ html{
 body{
     min-height: 100vh;
     position: relative;
+    max-width: 100vw;
     overflow-x: hidden;
 
     // helper class to prevent scroll when hamburger menu is open
@@ -43,3 +46,4 @@ body{
         display: none;
     }
 }
+

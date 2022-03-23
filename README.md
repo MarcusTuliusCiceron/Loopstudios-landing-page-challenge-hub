@@ -86,10 +86,30 @@ I start building the top section. I first create HTML and then style it with SCS
 ```
   I implemented the hamburger menu with previous helper class to display it only on mobile and tablet. I use absolute positioning and overflow method to make sure user is not able to scroll when the menu is open.
 
+Then I implemented center section which is pretty easy in terms of layout. But I tried to animate it in only when user scrolls enough to make it visible. thanks to internet research i was able to use intersection API to track when an element enter in view. Below code is setting the observer: 
+```js
+const observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('inner_box_in_view');
+        document.querySelector('.center_section').classList.add('center_section_in_view')
+      }
+    });
+  });
+  
+  observer.observe(document.querySelector('.inner_box'));
+```
 
+Then I implemented the gallery as a grid. the layout was prette straight forward
 ### Useful resources
 
 - [Brasspetal - github](https://github.com/brasspetals/fm-pod-request-access-landing-page) - This help me implement element apparation on loading the page thanks to keyframes animation
+- [Cool CSS animation](https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/) - This helped to trigger the animation when element enter in user view
+
+
 
 
 
