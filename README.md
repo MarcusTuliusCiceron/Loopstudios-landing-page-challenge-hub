@@ -44,11 +44,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### Building process
 
@@ -103,26 +99,21 @@ const observer = new IntersectionObserver(entries => {
   observer.observe(document.querySelector('.inner_box'));
 ```
 
-Then I implemented the gallery as a grid. the layout was prette straight forward
+Then I implemented the gallery as a grid. the layout was prette straight forward. When I tried to make the gallery item slide in one after each other I tried to use a calc function for timing delay but this was not supported by firefox so i decided to go with hard coded animation delay.
+
+Then I implemented footer, it was also pretty straightforward due. I used pseudo element absolute position to create hover effect
+
 ### Useful resources
 
 - [Brasspetal - github](https://github.com/brasspetals/fm-pod-request-access-landing-page) - This help me implement element apparation on loading the page thanks to keyframes animation
 - [Cool CSS animation](https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/) - This helped to trigger the animation when element enter in user view
-
-
-
+- [Stack overflow](https://stackoverflow.com/questions/27984452/css-calc-function-for-transition-delay) - This helped me understand that animation delay is not working on firefox and IE when using calc function
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@MarcusTuliusCiceron(https://www.frontendmentor.io/profile/MarcusTuliusCiceron)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Special thanks to Brasspetal and all frontend mentor community for giving help and good vibes, I'm really having fun doing all those challenges, and can't believe that poeple actually get paid to do that :D

@@ -37,3 +37,23 @@ const observer = new IntersectionObserver(entries => {
   });
   
   observer.observe(document.querySelector('.inner_box'));
+
+
+  // gallery section
+
+  const observer2 = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        console.log('item spoted')
+        var item = document.querySelectorAll('.grid_item')
+          for( i in item) {
+            item[i].classList.add('itemSlideIn')
+          }
+      }
+    });
+  });
+  
+  observer2.observe(document.querySelector('.last_item'));

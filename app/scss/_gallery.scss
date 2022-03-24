@@ -1,3 +1,5 @@
+$animation-duration: 300ms;
+
 .gallery{
     width: 80%;
     max-width: 1111px;
@@ -27,36 +29,50 @@
             grid-template-rows: repeat(4, 1fr);
         }
         @include breakpoint-down(small){
-            
+            height: 1100px;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(8, 1fr);
         }
         .grid_item{
             
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            opacity: 0;
+            @include breakpoint-down(medium){
+                opacity: 1;
+            }
             &:nth-child(1){
                 background-image: url(../../images/desktop/image-deep-earth.jpg);
+                animation-delay: 150ms;
             }
             &:nth-child(2){
                 background-image: url(../../images/desktop/image-night-arcade.jpg);
+                animation-delay: 300ms;
             }
             &:nth-child(3){
                 background-image: url(../../images/desktop/image-soccer-team.jpg);
+                animation-delay: 450ms;
             }
             &:nth-child(4){
                 background-image: url(../../images//desktop/image-grid.jpg);
+                animation-delay: 600ms;
             }
             &:nth-child(5){
                 background-image: url(../../images/desktop/image-from-above.jpg);
+                animation-delay: 750ms;
             }
             &:nth-child(6){
                 background-image: url(../../images/desktop/image-pocket-borealis.jpg);
+                animation-delay: 900ms;
             }
             &:nth-child(7){
                 background-image: url(../../images/desktop/image-curiosity.jpg);
+                animation-delay: 1050ms;
             }
             &:nth-child(8){
                 background-image: url(../../images/desktop/image-fisheye.jpg);
+                animation-delay: 1200ms;
             }
             .grid_overlay{
                 height: 100%;
@@ -96,5 +112,14 @@
     }
     .hideForDesktop{
         margin: 34px auto;
+    }
+}
+
+
+.itemSlideIn{
+    animation: galleryItemSlideIn 300ms ease-in-out;
+    animation-fill-mode: forwards;
+    @include breakpoint-down(medium){
+        animation: none;
     }
 }

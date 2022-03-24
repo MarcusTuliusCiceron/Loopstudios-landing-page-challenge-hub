@@ -1,0 +1,148 @@
+footer{
+    background-color: black;
+    padding: 43px 0;
+    color: $White;
+
+    
+    .footer{
+        margin: 0 auto;
+        width: 80%;
+        max-width: 1111px;
+        display: flex;
+        justify-content: space-between;
+        height: 83px;
+        @include breakpoint-down(small){
+            height: 470px;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+        &_left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include breakpoint-down(small){
+                justify-content: center;
+                align-items: center;
+            }
+            &_logo{
+                @include breakpoint-down(small){
+                    margin-bottom: 32px;
+                }
+            }
+            nav{
+                @include breakpoint-down(small){
+                    margin-bottom: 48px;
+                }
+                a{
+                    color: $White;
+                    font-size: 15px;
+                    line-height: 25px;
+                    font-family: 'Alata', sans-serif;
+                    text-decoration: none;
+                    margin-right: 32px;
+                    position: relative;
+                    
+                    @include breakpoint-down(small){
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        margin-bottom: 16px; 
+                        margin-right: 0;
+                        
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 60%;
+                        height: 3px;
+                        background-color: $White;
+                        bottom: -15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        scale: 0;
+                        
+                        transition: scale 200ms ease-in-out;
+                    }
+                    &:hover{
+                        &::after{
+                            scale: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &_right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include breakpoint-down(small){
+                
+                justify-content: center;
+                align-items: center;
+            }
+            .logos{
+                
+                display: flex;
+                justify-content: end;
+                @include breakpoint-down(small){
+                    justify-content: center;
+                    margin-bottom: 26px;
+                }
+                &_icon{
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 24px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: relative;
+                    @include breakpoint-down(small){
+                        margin-left: 12px;
+                        margin-right: 12px;
+                    }
+                    
+                    &:nth-child(1){
+                        background-image: url(../../images/icon-facebook.svg);
+                    }
+                    &:nth-child(2){
+                        background-image: url(../../images/icon-twitter.svg);
+                    }
+                    &:nth-child(3){
+                        background-image: url(../../images/icon-pinterest.svg);
+                    }
+                    &:nth-child(4){
+                        background-image: url(../../images/icon-instagram.svg);
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 24px;
+                            height: 3px;
+                            background-color: white;
+                            bottom: -5px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+                
+            }
+            .copyright{
+
+            }
+        }
+    }
+}
+
+.attribution{
+    background-color: black;
+    color: $White;
+    a{
+        color: $DarkGray;
+    }
+}
