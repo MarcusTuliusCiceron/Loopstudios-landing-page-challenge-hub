@@ -114,19 +114,25 @@ footer{
                     &:nth-child(4){
                         background-image: url(../../images/icon-instagram.svg);
                     }
-
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 24px;
+                        height: 3px;
+                        background-color: white;
+                        bottom: -8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        scale: 0;
+                        transition: scale 200ms ease-in-out;
+                        border-radius: 1px;
+                        transform-origin: center;
+                    }
                     &:hover{
                         cursor: pointer;
 
                         &::after{
-                            content: "";
-                            position: absolute;
-                            width: 24px;
-                            height: 3px;
-                            background-color: white;
-                            bottom: -5px;
-                            left: 50%;
-                            transform: translateX(-50%);
+                            scale: 1;
                         }
                     }
                 }

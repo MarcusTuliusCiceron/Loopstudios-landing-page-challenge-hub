@@ -6,6 +6,9 @@ $animation-duration: 300ms;
     margin: 0 auto;
     margin-top: 160px;
     margin-bottom: 184px;
+    @include breakpoint-down(small){
+        margin-bottom: 92px;
+    }
     &_header{
         display: flex;
         justify-content: space-between;
@@ -15,6 +18,10 @@ $animation-duration: 300ms;
             font-size: 48px;
             line-height: 48px;
             text-transform: uppercase;
+            @include breakpoint-down(small){
+                font-size: 32px;
+                line-height: 32px;
+            }
         }
     }
     &_grid{
@@ -29,9 +36,9 @@ $animation-duration: 300ms;
             grid-template-rows: repeat(4, 1fr);
         }
         @include breakpoint-down(small){
-            height: 1100px;
+            height: auto;
             grid-template-columns: 100%;
-            grid-template-rows: repeat(8, 1fr);
+            grid-template-rows: repeat(8, auto);
         }
         .grid_item{
             
@@ -40,7 +47,11 @@ $animation-duration: 300ms;
             background-size: cover;
             opacity: 0;
             @include breakpoint-down(medium){
-                opacity: 1;
+                
+            }
+            @include breakpoint-down(small){
+                height: 120px;
+                //opacity: 1;
             }
             &:nth-child(1){
                 background-image: url(../../images/desktop/image-deep-earth.jpg);
@@ -80,12 +91,18 @@ $animation-duration: 300ms;
                 align-items: end;
                 text-transform: uppercase;
                 color: $White;
-                font-size: 32px;
+                font-size: 30px;
                 line-height: 32px;
-                padding: 32px 40px;
+                padding: 32px 1.5vw;
                 transition: all 300ms ease-in-out;
+                
+                @include breakpoint-down(medium){
+                    font-size: 24px;
+                    line-height: 24px;
+                }
                 &:hover{
                     background: rgba(255, 255, 255, 0.75071);
+                    color: black;
                     cursor: pointer;
                     
                 }
@@ -119,7 +136,7 @@ $animation-duration: 300ms;
 .itemSlideIn{
     animation: galleryItemSlideIn 300ms ease-in-out;
     animation-fill-mode: forwards;
-    @include breakpoint-down(medium){
-        animation: none;
+    @include breakpoint-down(small){
+        //animation: none;
     }
 }
