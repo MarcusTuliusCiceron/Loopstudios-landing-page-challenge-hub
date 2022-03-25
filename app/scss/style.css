@@ -794,7 +794,7 @@
           align-items: end;
   text-transform: uppercase;
   color: white;
-  font-size: 30px;
+  font-size: 2vw;
   line-height: 32px;
   padding: 32px 1.5vw;
   -webkit-transition: all 300ms ease-in-out;

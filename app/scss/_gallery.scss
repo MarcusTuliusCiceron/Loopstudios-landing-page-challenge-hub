@@ -91,7 +91,7 @@ $animation-duration: 300ms;
                 align-items: end;
                 text-transform: uppercase;
                 color: $White;
-                font-size: 30px;
+                font-size: min(2vw, 32px);
                 line-height: 32px;
                 padding: 32px 1.5vw;
                 transition: all 300ms ease-in-out;
